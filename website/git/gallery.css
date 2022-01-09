@@ -1,0 +1,199 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+input {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;    
+}
+
+@keyframes animate {
+    0%{
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+
+.top-content {
+    background-color: rgb(243, 243, 243);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow:  3px 3px 5px lightgray;
+}
+
+h3 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(197, 195, 195);
+    line-height: 60px;
+    padding: 0 50px;
+    color: rgb(255, 255, 255);
+}
+label {
+    
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgb(19, 16, 16);
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+   
+}
+label:hover {
+    background: rgb(185, 180, 180);
+    color: rgb(19, 18, 18);
+    border-radius: 5px;
+}
+.photo-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+   grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px;
+}
+.pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px lightgray;
+    
+}
+ .pic img {
+     width: 100%;
+     height: 100%;
+     flex: content;
+     justify-content: center;
+     object-fit: cover;
+     border-radius: 10px;
+     transition: .5s;
+ }
+ 
+ .pic::before{
+     content:"photo-gallery" ;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     font-size: 22px;
+     font-weight: bold;
+     width: 100%;
+     margin-top: -100px;
+     opacity: 0;
+     transition: .2s;
+     transition-delay: .1s;
+     z-index: 1;
+}
+
+.pic:after
+{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.4);
+    transition: .3s;
+
+}
+
+.pic:hover::after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+    
+}
+
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity:1 ;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+
+}
+#check2:checked ~ .container .photo-gallery .Wedding {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check2:checked ~ .container .photo-gallery .Model,
+#check2:checked ~ .container .photo-gallery .Baby {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#check3:checked ~ .container .photo-gallery .Model {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check3:checked ~ .container .photo-gallery .wedding,
+#check3:checked ~ .container .photo-gallery .Baby {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#check4:checked ~ .container .photo-gallery .Baby {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check4:checked ~ .container .photo-gallery .wedding,
+#check4:checked ~ .container .photo-gallery .Model {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}

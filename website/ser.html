@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: rgb(71, 69, 69);
+      }
+
+      .heading {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .heading h2 {
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .container-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 15px;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .container-box .box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        border-radius: 5px;
+        color: bisque;
+
+        padding: 10px;
+        margin: 15px 15px;
+      }
+
+      .container-box.box-ing {
+        margin: 10px 0;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+
+      .img {
+        margin-left: 20%;
+        width: 50%;
+        height: 120%;
+        border-radius: 50%;
+        display: flex;
+      }
+
+      .container-box.box-ing .img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .container-box .box-content {
+        padding: 15px;
+        text-align: center;
+        margin-top: 15px;
+        text-transform: capitalize;
+      }
+
+      .box-content::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 5px;
+        left: 0;
+        top: 0;
+        background-color: black;
+      }
+
+      .box-content h3::before {
+        position: absolute;
+        content: "";
+        width: 70px;
+        height: 2px;
+        left: 38%;
+        top: 43%;
+        background-color: rgb(212, 38, 38);
+        margin-top: 5px;
+      }
+
+      .box-content p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: center;
+        opacity: 0.7;
+      }
+
+      .box-content a {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        text-transform: capitalize;
+        color: #fff;
+        background-color: red;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .header {
+        font-style: italic;
+      }
+
+      .box:hover {
+        background-color: slategray;
+        color: rgb(238, 212, 207);
+      }
+
+      a:hover {
+        background-color: rgb(1, 6, 15);
+        color: rgb(238, 212, 207);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="heading">
+      <h2 class="header">OUR SERVICES</h2>
+    </div>
+    <div class="container-box">
+      <div class="box">
+        <div class="box-ing">
+          <img
+            class="img"
+            src="https://images.theconversation.com/files/152125/original/image-20170109-23482-alvgyi.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+            alt="not foound"
+          />
+        </div>
+        <div class="box-content">
+          <h3>WEDDING SHOOT</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            illo fugit repudiandae, expedita quidem fuga vero nesciunt
+            voluptatum. Quidem recusandae id laborum cumque maxime tenetur sit
+            reprehenderit pariatur nihil vitae?
+          </p>
+          <a href="">Order NOW</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-ing">
+          <img
+            class="img"
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhIVFRUWFRUVFRUVFRUXFRcVFRUWFhUXFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQFy0dHR0tLS0tLS0tLS0tKy0tLS0tKy0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgABB//EADYQAAIBAwIDBgQFBAIDAAAAAAABAgMRIQQxBRJBBiJRYXGRE4Gx8DKhwdHxQlJi4RQjBzNy/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECBAMF/8QAIxEBAQACAgICAwADAAAAAAAAAAECEQMxEiEEQSIyURMUYf/aAAwDAQACEQMRAD8Ab62rl/eR1wDT2gn1eTOVruSj4tG20NFKKXSxGHu7dL0uqRtEzHEbuXzX5Gp1Cx4X3+RltYu+lfeWbfoVyFi1Gjj3V6IOo3BdLC0VbwQdRQ8Sq2W2RFTxOSaxnxdncd1Hh+Yjoz73X1aOlKDoq2D2Du/QhzY8XuT02yZBiabJ2Iwe57Ppf3KhVFye3kctiDd83v8AaJILRp6yaRFE34iCUS2MrFMFguTKJOMiSKY6qF7OSv4XRZCqn1Qg9Z5YkyIB4RkSZGo8DATiNO8cChMe1I3jbxQjnGzOPLPe3XC+tJc5FkGj2Jy2rTyUStxL3Igw2QWUAbU0hg0U1aYAojSI1qQZKNmV143Qh9lrijjpUWcG1+MW8J0nPVT5vw5tb6GzoxxuJ+B6dKN97vfyH1NYNGE045UPq8R+Rm4O9eOM59Pvc0utVo49DN6dP48bW3Fydw8WqpBNMoiE0ysU1DVS7rx0267dBDSqWv7W8B7qnhmbSvK1rLde/wBSqMTOllR9A2mrIB0yyvL7YxRBprqQqSxbBKSTKmXvUS8p+JbAhBEpOxBrGciCxl/PyMv2i4/tChPx5pL6J/qLLOYzdXx8dzuoY8Z7SQoNRjapLqk8R9X4+Rj+K9qtTUeJ/DXhDH57i+oC1ImTLnyvXp6XH8bDGdbqrT1G6sHK8ryV027vPifU6Lx4Hypwbas7Pxva3nfofTuHRtThnm7qy223jfJ24ctxw+VjJYcaLVu/LJ3vsMRLpn30OUaIw5RzK62zLGiqtsVEvKQm1qtNjei8C/jEcpkcs9L4+wZ4yPMepmZ308kQuWEXERI8x6znE8uPabA2opgVSpYOrzFteFwOYz7Q50cdyHBpHr+tRpqSSSWyDYR87P6g8UGwNUc6D19lFt/Qz3B481e+MfexouJ4i8XEHAHerL08M+5OfcVj1WmiXRlb+CqJbCRUTVWs/C7ZwZqOJffT+TSa192Xo/uxmI1Prb9QyqsTjQLOBlAXcNd1cYImCuKpMs8cnkbBSSIU4Xd/Y8l3nZbCjtTxD4dP4cH35723UP8AYrdTa8cbldQq7T8d5pfBpvur8cl/U/BeQisV/CLaexizz8ruvU48JhjqK50wSrEKr1EgGrqEtznp02oq4/X6n0vhUl8KFtuVWt6Hy+tWR9G7PV4yoQcdrW9sM08H2y/K6h5oFeaHKYu4VTw5eIfFGudPNy7esH1bCGCarf5FQk6QPxaPdWPUuovJ2uheG1xZTcPHshaOsdLB5KoY2pJM8UiuUgeVUWxoTOoVTmDuqV1aobHilVmDTmdOqDTmLY0k6hwK5nB5Dwje0VnfIZTQJCLDKb++pujLQnE49x+jEHZxd6b8TRcTjeDzbDyZ/s6mnK6Vr4fiicu4rHqtCi6KKUyxS+/1HE1Rrn3Hi+HgzFKTf3c1WpWHbyMxL8Xhvj5k5rwOeFJ8owSAuFruhzCFe0bFcn4dcFkiNCH9T/jzAB9fq46ek5yy+i/uk9kYLnlUnKc3eUnd7+y8ENu0Gv8AjT/wjiK+rfqC6SgZeTPyup038PH4Y7vdUuiVVEkMa9kZftHxVUYSnLZWWN23skcbPeo7eXrdXVsivW0X0MvU7W13+GEYrpm7sHaTtHUlG7gpdHbEk/ozpOHKOX+zhbpbU1EofiWPE+l9ha6qaaKTvZtbbeXmfPtLqYVo3dn5eB9B/wDFmj5fiK7tzRaT6YdzrxftpHNvw3v0+g0afLFehNHqeCJqee9YHWfeC57C9ZY4IIponqo3gyES6su6+uHgKGVnUzkqqTI1t2UydjBW2RKpNlKqEpVCmbJUnzlVWZWkzyVJsD0qrTKJt2D46UseiwBbhG5s9HH/AAUcL2NxsaMX0+/kF0vvyA9OrW9AyjI9GMNUa+Pca8jOcAl3pf8A18vkabWLuv0ZmOCW5nZf1P0Fl3FY9VpETi1sRiWBEoVdmZipiTw+uHuamSM5qqTU3e2/Tw9WLNeBtwvMQyXgA8MlgOYoV7RlG7sJe1fFPhxVKO8leXlHovmPISSTk9ldv0R89VV1pyqTeW836JdPJWOfLlqevtp+NxzLLd6iqhLnY4p0WkCaSNN3lTnGXRuLTSfhgbaWStkyz/rdnd9FeoV8GR7XcN+LS5Nspp+Eltfy6fM2+silIWa/SqUWhb1dpslmq+PPQpT7/NGaw07eFu7jKHnZ3hzVOpKeFfDfVK+R3reFwqd2osr8MluAavhtRrl+M3E0488s9seXxcpfRNoU1Wbjs7X/AHPr3/jWf/ZNX3jF+zf7nzXS8OcHe9za9h9Q46qHmnF+119BY5bzjrlx2cdj6vN5OgR1C2ZKJrec6rsLotXD9R+Fi+DyAgmm/v7+8hC2B6YTHYAxmui1N3w77AcmMuIU+/LrlgioGDKe23G+grR7/wAdsNjpz1ySJ0ramlQsWOmec7bwXxgCUFA9lsTk7FdSorDJXc4r5zwYaihsFUtljPUEooLo7XN0ZK81Ebxa8jK8Phy1Gr9TXVVjJlVHlqyu+v5Cy+lY/bQU3gtSwU0HdF69Qia9Yg4nC1TrlfdjQNCjise8vQMulYdp8OYdUANIHdRHewvGqnLRa/uaj8t2YjU8OjK66NZS6mh7Ya5KVOnfKTk/m7L6CanrY26+xm5bvLTf8bDKYSz7L9FofgfgjZPdIIrcYlTlGPwpS5numkl6jiFpRTjldSFTTwlutjjZ/Hf/ACe/yizV2kotblap3ROUUtiyhEdjlKQ8S0HVCarSNtqaF0Z3iFCz2OWU07YZb9EcoDjgEOWpCX+Ufa4vUOaSQ508bbLa35Gnhn24fIy16fTqkrwXyJx6FFGd6Sfkiym8G15aWofdYsosY6t91iqhIDg+mwmDBIPYMpgTN61WlLN8gM6qO47q7VJJdGK1OTMGd/KtuGP4y0wlqClXkyunSb3DKUbEdqvpOjTLXIhGZ5PI0oVplE1gIlSI1IWQxsH8NnFtzh+j201DAdD2A9O8ZDKRujFVlRGVrpqtL1Na0ZfiCtWYsjwNdG7oLitsAGhlgOT+/qOFV0YizitPbH8DeCBOK07xuFGPZbp0G0twSiguErXb6Jv2VxLr5p24darqqioyUbJQTaX9Kthyxvf3MTp9dq9PJ/E5qsP6ovEreMX4+RuNXGXM3LLbbv6+IRQnGcbOzxbKT+u2yMnlu3b3MMJMJr6JeGdpqclaEpU8XcZqzv67P5MbQ41F2cWnfzLNRoKLj/6kn0t+xjnoHSrNrCk9uiJzk+qLjt9A02rUhjQMzwtvBotPPBylcc8NdCZxE3FaWGOlMUcYnj1HraMboh0dHLfyQzo0wejCwx0dPvRXi0vzNeM1NMmeXlltuKFlRivJBECmrhRWPkW0jvGSq+IPuiqg8hvFZ7IX0WFVj0Z02G0thdSYxpDTWI43Qk683mzePYhSpW6DvX0k5t7+oM6SMGWP5Vrxy/GBEzxML5ERdJE6PYdFiRL4JXOmw0Eqs7A85XPKkWRlcNjT2xxC5whpqaYZRYHTwgmjL6/U9GMQxozXFlar7GliIeMQvUXoF6PHtLRMZU2K9L5DGm8XCHRVLy+/A91kLwdjyjL3LqkbphUksI2J6iVqc35W93Y5xsB8a1ChTiv7pflH+Sc7rGu3HPLOQvqaWM1lC2pwNZs2GUtWtrhtKVzH6r0t3HoopcOaWXcS8W0i5lboavV11Ezmt1EZM5560rjytu6nooe41isCSjqEup2q7Q0qazNN/wBscv8A0Tj7VmeOtZZE2qrc8r9DyWt54KW11dL1I0I+5pww17Y+TPfqLoh/C4/9kOveQGvPA07PU71o+V2dp24XprK0lzJeRZFgk6l5u57Uq2TOzPoJxGpdg1Blded2Sobkfbpr0ZUX/oZ0dhZp39+Q0pPBTnS7VRTkwOrRCqryypmfLt0lLKlJlE5SQ4cSqdBPoR4K8i+FZk/iBf8Ax0Vy04eKpkFlURCpYtqaUGnRZNxp+SHKjifw2cT40/NooMKp9P0+/QEUugZRPQjILhsKONRyhvBi7jEdhHAWnGFIAohtIIdGU2Xp4B6TyERCpLK34jA9suOJat0s2pxivJNpSd/f8jfcRrxpKdWf4YJyfn4Jersj4jxKtKpOdSWZTk5P1bOHyMtTTb8PC3Ly/h9S41TW817l9ftbCK7ic37L3Zj6emCVpsGPb0LNu4nxuvVeZOK/tjhe+7F0tVNf1y92F1KADVj3vQIVmkalWT3lJ+rZCKPZHIqJrZcPfNTgv8VkaUYbCvhUe5H0Q5ps1Riy7e83zHvZePfk7bISOI67OS70lfov1Kx7c8/1OuXvMo1M7ItqztL5Aeumda4wHJl1FgqYRRZEWaaToNaSwLNH0GiWC3KltSOStovcDvhnGxUqg6xY6ZOMQ0YZo8aC3FFcoBobByZTKITOmQlTDR7gZxPCxwOFoDaNg3T23yLtNsmMKfTw6GhyGUgXiccBNMq4hG6D7EKoL/QXSzYGSL4dAVRdLfd/f8hcAOkwumKpZXt9Vfw1TWOZ3ljdR2V/X6HzqWkPqXbCmnTWHfo0tvUxD05i5/2en8Sz/GVUtEj2pp1YcfBsB1kcdNMuyavRENeSTk/M0mtkkm/IyTm5O72HBlXkW2W0Y3aXi0QCeHRvUivMue0ZdNjpY2XpYY0XgV0ZdA2nPod5WOwZF9PEYcHmo1FfF1b57iymE0p2kn4ZLnaMo0eol+wHq5nmpq4Bq9U6ZVyxiKYVRYDCWQ/SwvsTFU50McDGs7RBNCsW+7Futlsi7043sPzHrmQsdJHJWkHVPVUIukSVMR7kWKRCcjwgxpRbKKkyyUimQG85jiNz0CW6S9t/cYUXfoKtHLb9xnSf5HdI6ijtZ+E6gyWo2F9kVTRZAjNZudT/AD6jUKg3jzC6YDTaDKa/QVIu7T026V10efQxVjd9oH/0yzbbNvyMJORj5+49D4n61CrLAr1NUK1dWyM3xfiKink4a22z1N0NxrWY5U8v6CeLKnUc5czLOUvWo5+W7tzZZp63LJPwZQzy48fRVtqFS9muozorDEfAp81NeWB9Sidp7ZshEYlqRBtHVKhbmvjXbis7YPZVLglFMYafQzllL9w90rqPKKHvDqTttkp0Ogs1dbr79B1pdMl9+p0xx05Z5L6FKyBqru2w6MSudEL7cgNzpMKlQK3C5GqqKFI95i9U7EXFBo9qGiEti+ZROSDRQJNFbiwjlIyFo9oKKPDrHFEo0S2T/wBDejJHHHZI6lIsrLBxwr2AFVEIb3OOCgRSQTSlumeHAEOLUuajNWTw3nyPnNaR6cZOf6bvh/ZBxnW8kW30Rgq+rdWXM9ui8DjjnhPTtzZXykF0EWyPTgq8eg05ZPIs44IdajstV7svJmm0adTZ2Xi/HfoccdsYy8n9F6bTRk7RqXl0Ti0n6Mtp6KUny2+h4cdJjK5ZWyn/AA7hEYrOcDWlQSXnbc446604W2rY014ff2gmMTjhVK6KOkjjiQonUsUwkccI3lRlMpHHE0w1WsVORxwjeplVU44tKm5xxwaN/9k="
+            alt="not foound"
+          />
+        </div>
+        <div class="box-content">
+          <h3>BABY SHOOT</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            illo fugit repudiandae, expedita quidem fuga vero nesciunt
+            voluptatum. Quidem recusandae id laborum cumque maxime tenetur sit
+            reprehenderit pariatur nihil vitae?
+          </p>
+          <a href="">Order Now</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-ing">
+          <img
+            class="img"
+            src="https://images.theconversation.com/files/152125/original/image-20170109-23482-alvgyi.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+            alt="not foound"
+          />
+        </div>
+        <div class="box-content">
+          <h3>MODEL SHOOT</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            illo fugit repudiandae, expedita quidem fuga vero nesciunt
+            voluptatum. Quidem recusandae id laborum cumque maxime tenetur sit
+            reprehenderit pariatur nihil vitae?
+          </p>
+          <a href="">Order NOW</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
